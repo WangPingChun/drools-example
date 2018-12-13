@@ -1,0 +1,11 @@
+package com.rules
+import wang.crispin.example.drools.model.Goods
+
+rule "test-drools-api"
+
+when
+    $goods : Goods(discount==100)
+then
+    $goods.setDiscount(10);
+    System.out.println("test-drools-api has fired!");
+ end
