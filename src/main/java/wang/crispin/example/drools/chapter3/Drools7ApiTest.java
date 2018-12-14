@@ -1,5 +1,6 @@
 package wang.crispin.example.drools.chapter3;
 
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.kie.api.runtime.KieSession;
 import wang.crispin.example.drools.BaseTest;
@@ -7,9 +8,10 @@ import wang.crispin.example.drools.model.Car;
 import wang.crispin.example.drools.model.Person;
 
 /**
- * @author : wpc
+ * @author : WangPingChun
  * 2018-12-13
  */
+@Slf4j
 public class Drools7ApiTest extends BaseTest {
 
     @Test
@@ -32,9 +34,9 @@ public class Drools7ApiTest extends BaseTest {
         int count = kieSession.fireAllRules();
 
         kieSession.dispose();
-        System.out.println("Fire " + count + " rules!");
+        log.info("Fire " + count + " rules!");
 
-        System.out.println("The discount of c1 is " + c1.getDiscount());
-        System.out.println("The discount of c2 is " + c2.getDiscount());
+        log.info("The discount of c1 is " + c1.getDiscount());
+        log.info("The discount of c2 is " + c2.getDiscount());
     }
 }

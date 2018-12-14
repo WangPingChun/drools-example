@@ -1,0 +1,10 @@
+package com.rules;
+import wang.crispin.example.drools.model.Person
+// TODO
+rule "fact-handler-test"
+agenda-group "fact-handler-group"
+    when
+        $person : Person(age > 80)
+    then
+        System.out.println($person.getAge());
+end

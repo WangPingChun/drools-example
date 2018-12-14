@@ -3,7 +3,7 @@ package wang.crispin.example.drools.model;
 import lombok.Data;
 
 /**
- * @author : wpc
+ * @author : WangPingChun
  * 2018-12-13
  */
 @Data

@@ -1,0 +1,14 @@
+package com.stateless;
+import wang.crispin.example.drools.model.Person
+
+// COMMENT
+rule "stateless"
+    when
+        // LHS - Left Hand Side
+        $person : Person(age > 30)
+        and
+        $object : Object()
+    then
+        // RHS - Right Hand Side
+        System.out.println("stateless " + $person.getAge());
+end
