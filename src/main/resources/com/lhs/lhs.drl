@@ -1,0 +1,9 @@
+package com.lhs;
+dialect  "java"
+
+rule "test-lhs-rule"
+    when
+        eval(true)
+    then
+        System.out.println("规则被触发");
+end
