@@ -1,0 +1,12 @@
+package com.NoLoop;
+import wang.crispin.example.drools.model.Person
+
+rule "no-loop-test-rule"
+    // no-loop true
+    when
+        $person : Person(age < 10)
+    then
+        $person.setAge($person.getAge() + 1);
+        System.out.println($person.getAge());
+        update($person);
+end

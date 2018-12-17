@@ -3,9 +3,38 @@
 <kmodule xmlns="http://www.drools.org/xsd/kmodule">
     <kbase name="rules" packages="com.rules">
         <ksession name="all-rules" type="stateful"/>
-
     </kbase>
     <kbase name="stateless" packages="com.stateless">
         <ksession name="stateless-rules" type="stateless"/>
+    </kbase>
+    <kbase name="no-loop-rules" packages="com.no-loop">
+        <ksession name="no-loop-rules" type="stateful"/>
+    </kbase>
+    <kbase name="rule-flow-group" packages="com.ruleFlowGroup">
+        <ksession name="ruleFlowGroup-rules"/>
+    </kbase>
+    <kbase name="lock-on-active" packages="com.lockOnActive">
+        <ksession name="lock-on-active-rules"/>
+    </kbase>
+    <kbase name="salience-kbase" packages="com.salienceTest">
+        <ksession name="salience-rules"/>
+    </kbase>
+    <kbase name="agendaGroup-kbase" packages="com.agendaGroup">
+        <ksession name="agendaGroup-rules"/>
+    </kbase>
+    <kbase name="autoFocus-kbase" packages="com.autoFocus">
+        <ksession name="autoFocus-rules"/>
+    </kbase>
+    <kbase name="activationGroup-kbase" packages="com.activationGroup">
+        <ksession name="activationGroup-rules"/>
+    </kbase>
+    <kbase name="dateEffective-kbase" packages="com.dateEffective">
+        <ksession name="dateEffective-rules"/>
+    </kbase>
+    <kbase name="timer-kbase" packages="com.timerTest">
+        <ksession name="timer-rules"/>
+    </kbase>
+    <kbase name="calenderTest-kbase" packages="com.calenderTest">
+        <ksession name="calenderTest-rules"/>
     </kbase>
 </kmodule>

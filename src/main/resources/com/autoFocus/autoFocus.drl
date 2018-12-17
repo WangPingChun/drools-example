@@ -1,0 +1,19 @@
+package com.autoFocus;
+
+rule "test-auto-focus-1"
+salience 1
+agenda-group "auto-focus-1"
+auto-focus true
+    when
+    then
+        System.out.println("auto-focus-1 被触发");
+end
+
+rule "test-auto-focus-2"
+salience 0
+agenda-group "auto-focus-2"
+auto-focus true
+    when
+    then
+        System.out.println("auto-focus-2 被触发");
+end

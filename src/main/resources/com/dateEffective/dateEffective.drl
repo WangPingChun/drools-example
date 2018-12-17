@@ -1,0 +1,17 @@
+package com.dateEffective;
+dialect  "mvel"
+
+rule "test-date-effective-1"
+//date-effective "18-Dec-2018"
+date-effective "2018-12-18"
+    when
+    then
+        System.out.println("test-date-effective-1 被触发");
+end
+
+
+rule "test-date-effective-2"
+    when
+    then
+        System.out.println("test-date-effective-2 被触发");
+end

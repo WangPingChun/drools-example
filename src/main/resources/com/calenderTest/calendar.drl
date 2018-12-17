@@ -1,0 +1,9 @@
+package com.calenderTest;
+dialect  "mvel"
+
+rule "test-calendar"
+calendars "weekday"
+    when
+    then
+        System.out.println("test-calendar 被触发");
+end

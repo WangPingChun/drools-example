@@ -1,0 +1,13 @@
+package com.timerTest;
+import wang.crispin.example.drools.model.Server
+import java.util.Date
+dialect  "mvel"
+
+rule "test-timer"
+timer (cron:* 0/1 * * * ?)
+    when
+        $server : Server(times > 5)
+    then
+        System.out.println("已经尝试"+$server.getTimes()+"次，超过预警次数！");
+        $server.setResult(new Date() + "---服务器已经尝试" + $server.getTimes() + "次,依旧失败，发出警告");
+end

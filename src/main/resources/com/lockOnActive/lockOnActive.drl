@@ -1,0 +1,19 @@
+package com.lockOnActive;
+import wang.crispin.example.drools.model.Person;
+
+rule "test-lock-on-active-1"
+    when
+        $person : Person( age < 20 )
+    then
+        System.out.println("test-lock-on-active-1 触发，age = " + $person.getAge());
+        $person.setAge($person.getAge() + 1);
+        update($person)
+end
+
+rule "test-lock-on-active-2"
+//lock-on-active true
+    when
+        $person : Person( age >= 20 )
+    then
+        System.out.println("test-lock-on-active-2 触发，age = " + $person.getAge());
+end

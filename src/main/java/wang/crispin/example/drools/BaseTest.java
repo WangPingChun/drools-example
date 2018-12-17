@@ -17,6 +17,13 @@ public class BaseTest {
         return container.newKieSession("all-rules");
     }
 
+    protected KieSession getKieSessionByName(String sessionName) {
+        KieServices kieServices = KieServices.Factory.get();
+        KieContainer container = kieServices.getKieClasspathContainer();
+
+        return container.newKieSession(sessionName);
+    }
+
     protected KieSession getKieSession(String agendaGroupName) {
         KieSession kieSession = this.getKieSession();
         kieSession.getAgenda().getAgendaGroup(agendaGroupName).setFocus();
@@ -28,10 +35,5 @@ public class BaseTest {
         KieContainer container = kieServices.getKieClasspathContainer();
 
         return container.newStatelessKieSession("stateless-rules");
-    }
-
-    protected StatelessKieSession getStatelessKieSession(String agendaGroupName) {
-        StatelessKieSession statelessKieSession = this.getStatelessKieSession();
-        return statelessKieSession;
     }
 }

@@ -1,0 +1,8 @@
+package com.ruleFlowGroup;
+
+rule "ruleFlowGroup2"
+ruleflow-group "rule-flow-group-2"
+    when
+    then
+        System.out.println("rule-flow-group-2 被触发了");
+end

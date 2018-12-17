@@ -1,7 +1,6 @@
 package com.stateless;
 import wang.crispin.example.drools.model.Person
 
-// COMMENT
 rule "stateless"
     when
         // LHS - Left Hand Side
