@@ -1,0 +1,22 @@
+package com.rhs;
+import wang.crispin.example.drools.model.Person
+dialect  "mvel"
+
+rule "delete-demo-rule-1"
+salience 2
+agenda-group "delete-demo"
+    when
+        $person : Person(age == 21)
+    then
+        System.out.println("trigger delete demo rule 1");
+        //delete($person);
+end
+
+rule "delete-demo-rule-2"
+salience 1
+agenda-group "delete-demo"
+    when
+        $person : Person(age == 21)
+    then
+        System.out.println("trigger delete demo rule 2");
+end

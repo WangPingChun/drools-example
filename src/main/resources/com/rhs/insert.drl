@@ -1,0 +1,26 @@
+package com.insertDemo;
+import wang.crispin.example.drools.model.Person
+dialect  "java"
+
+rule "insert-demo-rule-1"
+agenda-group "insert-demo"
+salience 2
+    when
+
+    then
+        System.out.println("trigger the insert demo rule 1");
+        Person person = new Person();
+        person.setAge(28);
+        insert(person);
+
+end
+
+rule "insert-demo-rule-2"
+agenda-group "insert-demo"
+salience 1
+lock-on-active true
+    when
+        $person : Person(age == 28)
+    then
+        System.out.println("trigger the insert demo rule 2");
+end

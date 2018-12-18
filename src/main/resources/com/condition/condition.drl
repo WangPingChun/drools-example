@@ -1,0 +1,26 @@
+package com.condition;
+import wang.crispin.example.drools.model.Person
+import wang.crispin.example.drools.model.Car
+dialect  "mvel"
+
+rule "condition-demo-rule-1"
+no-loop true
+    when
+        $person : Person(age > 18)
+        do[updatePersonAge]
+    then
+       System.out.println("trigger condition demo rule 1 ");
+    then[updatePersonAge]
+        System.out.println("updatePersonAge");
+        modify($person){
+            setAge(16)
+        }
+end
+
+rule "condition-demo-rule-2" extends "condition-demo-rule-1"
+    when
+//        $person : Person(age > 18)
+        $car : Car(discount < 90)
+    then
+        System.out.println("trigger condition demo rule 2 ");
+end

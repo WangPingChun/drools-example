@@ -36,4 +36,9 @@ public class BaseTest {
 
         return container.newStatelessKieSession("stateless-rules");
     }
+
+    protected KieContainer getKieContainer() {
+        final KieServices kieServices = KieServices.Factory.get();
+        return kieServices.getKieClasspathContainer();
+    }
 }

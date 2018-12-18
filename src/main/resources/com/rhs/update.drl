@@ -1,0 +1,23 @@
+package com.rhs;
+import wang.crispin.example.drools.model.Person
+dialect  "java"
+
+rule "update-demo-rule-1"
+salience 2
+agenda-group "update-demo"
+    when
+        $person : Person(age == 24)
+    then
+        System.out.println("trigger the update demo rule 1");
+        //$person.setAge(25);
+//        update($person)
+end
+
+rule "update-demo-rule-2"
+salience 1
+agenda-group "update-demo"
+    when
+        $person : Person(age == 25)
+    then
+        System.out.println("trigger the update demo rule 2");
+end

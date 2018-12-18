@@ -1,0 +1,16 @@
+package com.pattern;
+import wang.crispin.example.drools.model.Person
+import wang.crispin.example.drools.model.SubPerson
+import wang.crispin.example.drools.model.Car
+dialect  "java"
+
+rule "test-pattern-rule"
+    when
+//        $p : Person($age : age, age > 10)
+//        $c : Car(discount < 90, person.(age > 10, name != ""))
+//        $car : Car(subPerson#Person.age == 10)
+        $person : Person(birthday > "2018-11-18")
+    then
+        System.out.println("trigger this rule");
+        System.out.println(String.format("Person's birthday %s", $person.getBirthday()));
+end

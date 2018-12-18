@@ -1,0 +1,19 @@
+package com.functionDemo;
+dialect  "java"
+
+rule "function-test-rule"
+    when
+    then
+        System.out.println("trigger function test rule");
+        helloFunction();
+        final String name = helloTom("Tom");
+        System.out.println(name);
+end
+
+function void helloFunction() {
+    System.out.println("hello function");
+}
+
+function String helloTom(String name) {
+    return "Hello " + name;
+}

@@ -1,0 +1,10 @@
+package com.globalDemo;
+global wang.crispin.example.drools.chapter9.EmailService emailService
+dialect  "java"
+
+rule "global-test-rule"
+    when
+    then
+        System.out.println("trigger global test rule");
+        emailService.sendEmail();
+end

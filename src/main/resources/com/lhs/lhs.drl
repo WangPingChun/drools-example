@@ -1,9 +1,10 @@
 package com.lhs;
+import wang.crispin.example.drools.model.Person
 dialect  "java"
 
 rule "test-lhs-rule"
     when
-        eval(true)
+        $p1 : Person(age == 10) and Person(age == 15)
     then
-        System.out.println("规则被触发");
+        System.out.println("规则被触发,age = " + $p1.getAge());
 end

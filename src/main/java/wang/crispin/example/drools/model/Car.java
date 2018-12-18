@@ -10,4 +10,5 @@ import lombok.Data;
 public class Car {
     private int discount = 100;
     private Person person;
+    private SubPerson subPerson;
 }

@@ -1,0 +1,20 @@
+package com.queryDemo;
+import wang.crispin.example.drools.model.Person
+dialect  "mvel"
+
+rule "queryDemo"
+    when
+        $person : Person(age == 20)
+    then
+        System.out.println("trigger query demo");
+        System.out.println(String.format("Name is %s",$person.getName()));
+end
+
+
+query "query-by-age"
+    $person : Person(age == 23)
+end
+
+query "query-by-param" (Integer ageParam)
+    $person : Person(age >= ageParam)
+end

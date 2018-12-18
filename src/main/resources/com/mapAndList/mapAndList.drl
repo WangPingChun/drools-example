@@ -1,0 +1,12 @@
+package com.mapAndList
+import java.util.Map
+import java.util.List
+
+rule "map-and-list-rule"
+    when
+//        $map : Map()
+//        $map : Map(this["a"] == 1)
+        $list : List()
+    then
+        System.out.println("trigger the rule!");
+end

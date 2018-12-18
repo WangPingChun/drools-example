@@ -40,4 +40,31 @@
     <kbase name="lhs-kbase" packages="com.lhs">
         <ksession name="lhs-rules"/>
     </kbase>
+    <kbase name="pattern-kbase" packages="com.pattern">
+        <ksession name="pattern-rules"/>
+    </kbase>
+    <kbase name="mapAndList-kbase" packages="com.mapAndList">
+        <ksession name="mapAndList-rules"/>
+    </kbase>
+    <kbase name="rhs-kbase" packages="com.rhs">
+        <ksession name="insert-rules"/>
+        <ksession name="update-rules"/>
+        <ksession name="delete-rules"/>
+        <ksession name="modify-rules"/>
+    </kbase>
+    <kbase name="condition-kbase" packages="com.condition">
+        <ksession name="condition-rules"/>
+    </kbase>
+    <kbase name="query-kbase" packages="com.queryDemo">
+        <ksession name="query-rules"/>
+    </kbase>
+    <kbase name="function-kbase" packages="com.functionDemo">
+        <ksession name="function-rules"/>
+    </kbase>
+    <kbase name="global-kbase" packages="com.globalDemo">
+        <ksession name="global-rules"/>
+    </kbase>
+    <kbase name="new-type-kbase" packages="com.newType">
+        <ksession name="new-type-rules"/>
+    </kbase>
 </kmodule>
